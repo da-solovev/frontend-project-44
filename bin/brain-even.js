@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { startGameBrainEven } from '../src/even.js';
 
 const roundCount = 3;
