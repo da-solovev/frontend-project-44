@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
 
+export const getRandomInt = (max) => Math.floor(Math.random() * max) + 1;
+
 export const getUserName = () => {
   const userName = readlineSync.question('May I have your name? ');
   return userName;
@@ -19,7 +21,7 @@ export const checkCorrectUserAnswer = (typeCheck, userAnswer) => {
   }
   if (typeCheck === 'Integer') {
     const userAnswerToInt = parseInt(userAnswer, 10);
-    return userAnswerToInt.isInteger();
+    return Number.isInteger(userAnswerToInt);
   }
 
   return false;

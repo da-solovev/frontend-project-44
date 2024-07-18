@@ -1,10 +1,8 @@
-import { startBrainGame } from '../index.js';
+import { startBrainGame, getRandomInt } from '../index.js';
 
 const rules = ["Answer 'yes' if number even otherwise answer 'no'.", 'yes/no'];
 
 const isEven = (number) => number % 2 === 0;
-
-const getRandomInt = (max) => Math.floor(Math.random() * max) + 1;
 
 const generateDataEven = (maxNumber) => {
   const question = getRandomInt(maxNumber);
