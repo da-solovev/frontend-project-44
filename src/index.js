@@ -1,5 +1,8 @@
 import readlineSync from 'readline-sync';
 
+export const roundCount = 3;
+export const maxNumber = 15;
+
 export const getRandomInt = (max) => Math.floor(Math.random() * max) + 1;
 
 export const getUserName = () => {
@@ -33,7 +36,6 @@ export const showMessageToLossGame = (userName, userAnswer, correctAnswer) => {
 };
 
 export const startBrainGame = (rules, data) => {
-  const roundCount = 3;
   const [textRules, typeCheck] = rules;
 
   console.log('Welcome to the Brain Games!');

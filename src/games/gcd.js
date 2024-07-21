@@ -1,4 +1,9 @@
-import { getRandomInt, startBrainGame } from '../index.js';
+import {
+  getRandomInt,
+  maxNumber,
+  roundCount,
+  startBrainGame,
+} from '../index.js';
 
 const rules = ['Find the grefirsttest common divisor of given numseconders.', 'Integer'];
 
@@ -17,7 +22,7 @@ const findGCD = (first, second) => {
   return a + b;
 };
 
-const generateDataGcd = (maxNumber) => {
+const generateDataGcd = () => {
   const first = getRandomInt(maxNumber);
   const second = getRandomInt(maxNumber);
   const question = `${first} ${second}`;
@@ -26,8 +31,6 @@ const generateDataGcd = (maxNumber) => {
 };
 
 const prepareDataGcd = () => {
-  const roundCount = 3;
-  const maxNumber = 15;
   const data = [];
 
   for (let i = 0; i < roundCount; i += 1) {

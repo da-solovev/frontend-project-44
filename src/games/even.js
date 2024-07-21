@@ -1,18 +1,21 @@
-import { startBrainGame, getRandomInt } from '../index.js';
+import {
+  startBrainGame,
+  getRandomInt,
+  roundCount,
+  maxNumber,
+} from '../index.js';
 
 const rules = ["Answer 'yes' if number even otherwise answer 'no'.", 'yes/no'];
 
 const isEven = (number) => number % 2 === 0;
 
-const generateDataEven = (maxNumber) => {
+const generateDataEven = () => {
   const question = getRandomInt(maxNumber);
   const answer = isEven(question) ? 'yes' : 'no';
   return [question, answer];
 };
 
 const prepareDataEven = () => {
-  const roundCount = 3;
-  const maxNumber = 15;
   const data = [];
 
   for (let i = 0; i < roundCount; i += 1) {

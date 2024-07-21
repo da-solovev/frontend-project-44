@@ -1,5 +1,10 @@
 import _ from 'lodash';
-import { getRandomInt, startBrainGame } from '../index.js';
+import {
+  getRandomInt,
+  maxNumber,
+  roundCount,
+  startBrainGame,
+} from '../index.js';
 
 const rules = ['What is the result of the expression?', 'Integer'];
 
@@ -8,7 +13,7 @@ const generateOperation = () => {
   return _.sample(operations);
 };
 
-const generateDataCalc = (maxNumber) => {
+const generateDataCalc = () => {
   const operation = generateOperation();
   const first = getRandomInt(maxNumber);
   const second = getRandomInt(maxNumber);
@@ -27,8 +32,6 @@ const generateDataCalc = (maxNumber) => {
 };
 
 const prepareDataCalc = () => {
-  const roundCount = 3;
-  const maxNumber = 15;
   const data = [];
 
   for (let i = 0; i < roundCount; i += 1) {

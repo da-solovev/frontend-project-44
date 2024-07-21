@@ -1,4 +1,9 @@
-import { getRandomInt, startBrainGame } from '../index.js';
+import {
+  getRandomInt,
+  maxNumber,
+  roundCount,
+  startBrainGame,
+} from '../index.js';
 
 const rules = ["Answer 'yes' if given number is prime. Otherwise answer 'no'.", 'yes/no'];
 
@@ -11,15 +16,13 @@ const isPrimeNumber = (number) => {
   return true;
 };
 
-const generateDataPrime = (maxNumber) => {
+const generateDataPrime = () => {
   const question = getRandomInt(maxNumber);
   const answer = isPrimeNumber(question) ? 'yes' : 'no';
   return [question, answer];
 };
 
 const prepareDataPrime = () => {
-  const roundCount = 3;
-  const maxNumber = 15;
   const data = [];
 
   for (let i = 0; i < roundCount; i += 1) {
