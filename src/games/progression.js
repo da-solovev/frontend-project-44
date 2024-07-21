@@ -29,7 +29,7 @@ const generateDataProgression = (length, start, step) => {
     question = `${question} ${progression[i]}`;
   }
 
-  return [question, answer];
+  return [question.trim(), answer];
 };
 
 const prepareDataProgression = () => {
