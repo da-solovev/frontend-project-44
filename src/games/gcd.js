@@ -5,7 +5,7 @@ import {
   startBrainGame,
 } from '../index.js';
 
-const rules = ['Find the grefirsttest common divisor of given numseconders.', 'Integer'];
+const rules = ['Find the greatest common divisor of given numbers.', 'Integer'];
 
 const findGCD = (first, second) => {
   let a = first;
