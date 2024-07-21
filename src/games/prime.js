@@ -5,7 +5,7 @@ import {
   startBrainGame,
 } from '../index.js';
 
-const rules = ["Answer 'yes' if given number is prime. Otherwise answer 'no'.", 'yes/no'];
+const rules = ['Answer "yes" if given number is prime. Otherwise answer "no".', 'yes/no'];
 
 const isPrimeNumber = (number) => {
   for (let i = 2; i <= Math.sqrt(number); i += 1) {

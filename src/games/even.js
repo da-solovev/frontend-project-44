@@ -5,7 +5,7 @@ import {
   maxNumber,
 } from '../index.js';
 
-const rules = ["Answer 'yes' if number even otherwise answer 'no'.", 'yes/no'];
+const rules = ['Answer "yes" if number even otherwise answer "no".', 'yes/no'];
 
 const isEven = (number) => number % 2 === 0;
 
