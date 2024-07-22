@@ -38,4 +38,4 @@ const prepareDataPrime = () => {
 
 const data = prepareDataPrime();
 
-export default startBrainGame(rules, data);
+export default () => startBrainGame(rules, data);

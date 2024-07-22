@@ -43,4 +43,4 @@ const prepareDataCalc = () => {
 
 const data = prepareDataCalc();
 
-export default startBrainGame(rules, data);
+export default () => startBrainGame(rules, data);

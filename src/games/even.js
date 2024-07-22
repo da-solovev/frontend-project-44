@@ -27,4 +27,4 @@ const prepareDataEven = () => {
 
 const data = prepareDataEven();
 
-export default startBrainGame(rules, data);
+export default () => startBrainGame(rules, data);

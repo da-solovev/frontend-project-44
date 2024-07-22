@@ -42,4 +42,4 @@ const prepareDataGcd = () => {
 
 const data = prepareDataGcd();
 
-export default startBrainGame(rules, data);
+export default () => startBrainGame(rules, data);

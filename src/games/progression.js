@@ -50,4 +50,4 @@ const prepareDataProgression = () => {
 
 const data = prepareDataProgression();
 
-export default startBrainGame(rules, data);
+export default () => startBrainGame(rules, data);
