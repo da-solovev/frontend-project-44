@@ -11,7 +11,8 @@
 
 Пример игры:
 
-> brain-progression
+```
+brain-progression
 Welcome to the Brain Game!
 What number is missing in the progression?
 May I have your name? Roman
@@ -25,7 +26,8 @@ Correct!
 Question: 12 15 18 21 .. 27 30 33
 Your answer: 24 # Пользователь вводит ответ
 Correct!
->Congratulations, Roman!
+Congratulations, Roman!
+```
 
 ## Setup
 ```
@@ -44,6 +46,7 @@ brain-prime
 ```
 
 ## Демонстрация:
+
 [Brain-even](https://asciinema.org/a/GLtLJq2SjO53vHXfs1aXEteRU)
 [Brain-calc](https://asciinema.org/a/dlebTXXHm2fARSs6yml4UBeBi)
 [Brain-gcd](https://asciinema.org/a/2k76QT8NDeAuUKVpyl2qnKURi)
