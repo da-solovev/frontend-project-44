@@ -1,7 +1,6 @@
 import {
   getRandomInt,
   maxNumber,
-  roundCount,
   startBrainGame,
 } from '../index.js';
 
@@ -22,7 +21,7 @@ const findGCD = (first, second) => {
   return a + b;
 };
 
-const generateDataGcd = () => {
+export const generateDataGcd = () => {
   const first = getRandomInt(maxNumber);
   const second = getRandomInt(maxNumber);
   const question = `${first} ${second}`;
@@ -30,16 +29,4 @@ const generateDataGcd = () => {
   return [question, answer];
 };
 
-const prepareDataGcd = () => {
-  const data = [];
-
-  for (let i = 0; i < roundCount; i += 1) {
-    data.push(generateDataGcd(maxNumber));
-  }
-
-  return data;
-};
-
-const data = prepareDataGcd();
-
-export default () => startBrainGame(rules, data);
+export default () => startBrainGame(rules, 'gcd');

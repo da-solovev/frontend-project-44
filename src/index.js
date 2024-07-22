@@ -1,4 +1,9 @@
 import readlineSync from 'readline-sync';
+import { generateDataEven } from './games/even.js';
+import { generateDataGcd } from './games/gcd.js';
+import { generateDataPrime } from './games/prime.js';
+import { generateDataProgression, generateParamsForProgression } from './games/progression.js';
+import { generateDataCalc } from './games/calc.js';
 
 export const roundCount = 3;
 export const maxNumber = 15;
@@ -35,7 +40,26 @@ export const showMessageToLossGame = (userName, userAnswer, correctAnswer) => {
   console.log(`Let's try again, ${userName}!`);
 };
 
-export const startBrainGame = (rules, data) => {
+export const generateQuestion = (nameGame) => {
+  switch (nameGame) {
+    case 'even':
+      return generateDataEven(maxNumber);
+    case 'gcd':
+      return generateDataGcd(maxNumber);
+    case 'prime':
+      return generateDataPrime(maxNumber);
+    case 'progression': {
+      const params = generateParamsForProgression();
+      const [length, start, step] = params;
+      return generateDataProgression(length, start, step);
+    }
+    case 'calc':
+      return generateDataCalc(maxNumber);
+    default: return [];
+  }
+};
+
+export const startBrainGame = (rules, nameGame) => {
   const [textRules, typeCheck] = rules;
 
   console.log('Welcome to the Brain Games!');
@@ -44,7 +68,7 @@ export const startBrainGame = (rules, data) => {
   console.log(textRules);
 
   for (let i = 0; i < roundCount; i += 1) {
-    const [question, correctAnswer] = data[i];
+    const [question, correctAnswer] = generateQuestion(nameGame);
 
     console.log(`Question: ${question}`);
     const userAnswer = getUserAnswer();

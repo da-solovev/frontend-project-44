@@ -1,5 +1,7 @@
 import {
-  getRandomInt, maxNumber, roundCount, startBrainGame,
+  getRandomInt,
+  maxNumber,
+  startBrainGame,
 } from '../index.js';
 
 const rules = ['What number is missing in the progression?', 'Integer'];
@@ -15,7 +17,18 @@ const generateArithmeticProgression = (length, start, step) => {
   return progression;
 };
 
-const generateDataProgression = (length, start, step) => {
+export const generateParamsForProgression = () => {
+  const minLength = 5;
+  const maxGrowthLength = 5;
+
+  const length = getRandomInt(maxGrowthLength) + minLength;
+  const start = getRandomInt(maxNumber);
+  const step = getRandomInt(maxNumber);
+
+  return [length, start, step];
+};
+
+export const generateDataProgression = (length, start, step) => {
   const progression = generateArithmeticProgression(length, start, step);
   const positionSectetValue = getRandomInt(length) - 1;
 
@@ -32,22 +45,4 @@ const generateDataProgression = (length, start, step) => {
   return [question.trim(), answer];
 };
 
-const prepareDataProgression = () => {
-  const minLengthProgression = 5;
-  const maxGrowthLength = 5;
-  const data = [];
-
-  for (let i = 0; i < roundCount; i += 1) {
-    const lengthProgression = getRandomInt(maxGrowthLength) + minLengthProgression;
-    const start = getRandomInt(maxNumber);
-    const step = getRandomInt(maxNumber);
-
-    data.push(generateDataProgression(lengthProgression, start, step));
-  }
-
-  return data;
-};
-
-const data = prepareDataProgression();
-
-export default () => startBrainGame(rules, data);
+export default () => startBrainGame(rules, 'progression');

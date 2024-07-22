@@ -1,7 +1,6 @@
 import {
   getRandomInt,
   maxNumber,
-  roundCount,
   startBrainGame,
 } from '../index.js';
 
@@ -20,22 +19,10 @@ const isPrimeNumber = (number) => {
   return true;
 };
 
-const generateDataPrime = () => {
+export const generateDataPrime = () => {
   const question = getRandomInt(maxNumber);
   const answer = isPrimeNumber(question) ? 'yes' : 'no';
   return [question, answer];
 };
 
-const prepareDataPrime = () => {
-  const data = [];
-
-  for (let i = 0; i < roundCount; i += 1) {
-    data.push(generateDataPrime(maxNumber));
-  }
-
-  return data;
-};
-
-const data = prepareDataPrime();
-
-export default () => startBrainGame(rules, data);
+export default () => startBrainGame(rules, 'prime');

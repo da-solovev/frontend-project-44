@@ -2,7 +2,6 @@ import _ from 'lodash';
 import {
   getRandomInt,
   maxNumber,
-  roundCount,
   startBrainGame,
 } from '../index.js';
 
@@ -13,7 +12,7 @@ const generateOperation = () => {
   return _.sample(operations);
 };
 
-const generateDataCalc = () => {
+export const generateDataCalc = () => {
   const operation = generateOperation();
   const first = getRandomInt(maxNumber);
   const second = getRandomInt(maxNumber);
@@ -31,16 +30,4 @@ const generateDataCalc = () => {
   }
 };
 
-const prepareDataCalc = () => {
-  const data = [];
-
-  for (let i = 0; i < roundCount; i += 1) {
-    data.push(generateDataCalc(maxNumber));
-  }
-
-  return data;
-};
-
-const data = prepareDataCalc();
-
-export default () => startBrainGame(rules, data);
+export default () => startBrainGame(rules, 'calc');
