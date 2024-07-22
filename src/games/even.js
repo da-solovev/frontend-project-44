@@ -6,7 +6,6 @@ import {
 
 const nameGame = 'even';
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
-const typeValidation = 'yes/no';
 
 const isEven = (number) => number % 2 === 0;
 
@@ -16,4 +15,4 @@ export const generateDataEven = () => {
   return [question, answer];
 };
 
-export default () => startBrainGame(nameGame, description, typeValidation);
+export default () => startBrainGame(nameGame, description);

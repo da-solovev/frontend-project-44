@@ -6,7 +6,6 @@ import {
 
 const nameGame = 'progression';
 const description = 'What number is missing in the progression?';
-const typeValidation = 'Integer';
 
 const generateArithmeticProgression = (length, start, step) => {
   const progression = [];
@@ -47,4 +46,4 @@ export const generateDataProgression = (length, start, step) => {
   return [question.trim(), answer];
 };
 
-export default () => startBrainGame(nameGame, description, typeValidation);
+export default () => startBrainGame(nameGame, description);

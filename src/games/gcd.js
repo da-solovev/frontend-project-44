@@ -6,7 +6,6 @@ import {
 
 const nameGame = 'gcd';
 const description = 'Find the greatest common divisor of given numbers.';
-const typeValidation = 'Integer';
 
 const findGCD = (first, second) => {
   let a = first;
@@ -31,4 +30,4 @@ export const generateDataGcd = () => {
   return [question, answer];
 };
 
-export default () => startBrainGame(nameGame, description, typeValidation);
+export default () => startBrainGame(nameGame, description);

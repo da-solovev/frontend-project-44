@@ -22,24 +22,6 @@ export const getUserAnswer = () => {
 
 export const checkAnswerToQuestion = (userAnswer, correctAnswer) => userAnswer === correctAnswer;
 
-export const checkCorrectUserAnswer = (typeCheck, userAnswer) => {
-  if (typeCheck === 'yes/no') {
-    const answer = ['yes', 'no'];
-    return answer.includes(userAnswer);
-  }
-  if (typeCheck === 'Integer') {
-    const userAnswerToInt = parseInt(userAnswer, 10);
-    return Number.isInteger(userAnswerToInt);
-  }
-
-  return false;
-};
-
-export const showMessageToLossGame = (userName, userAnswer, correctAnswer) => {
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-  console.log(`Let's try again, ${userName}!`);
-};
-
 export const generateQuestion = (nameGame) => {
   switch (nameGame) {
     case 'even':
@@ -59,7 +41,7 @@ export const generateQuestion = (nameGame) => {
   }
 };
 
-export const startBrainGame = (nameGame, description, typeValidation) => {
+export const startBrainGame = (nameGame, description) => {
   console.log('Welcome to the Brain Games!');
   const userName = getUserName();
   console.log(`Hello, ${userName}!`);
@@ -71,16 +53,12 @@ export const startBrainGame = (nameGame, description, typeValidation) => {
     console.log(`Question: ${question}`);
     const userAnswer = getUserAnswer();
 
-    if (!checkCorrectUserAnswer(typeValidation, userAnswer)) {
-      showMessageToLossGame(userName, userAnswer, correctAnswer);
-      return;
-    }
-
     const isWin = checkAnswerToQuestion(userAnswer, correctAnswer);
     if (isWin) {
       console.log('Correct!');
     } else {
-      showMessageToLossGame(userName, userAnswer, correctAnswer);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${userName}!`);
       return;
     }
   }

@@ -6,7 +6,6 @@ import {
 
 const nameGame = 'prime';
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const typeValidation = 'yes/no';
 
 const isPrimeNumber = (number) => {
   if (number <= 1) {
@@ -27,4 +26,4 @@ export const generateDataPrime = () => {
   return [question, answer];
 };
 
-export default () => startBrainGame(nameGame, description, typeValidation);
+export default () => startBrainGame(nameGame, description);
