@@ -1,5 +1,4 @@
-[![Actions Status](https://github.com/da-solovev/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/da-solovev/frontend-project-44/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/81d6b18e10983b0b6fbd/maintainability)](https://codeclimate.com/github/da-solovev/frontend-project-44/maintainability)
+[![Actions Status](https://github.com/da-solovev/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/da-solovev/frontend-project-44/actions)[![Maintainability](https://api.codeclimate.com/v1/badges/81d6b18e10983b0b6fbd/maintainability)](https://codeclimate.com/github/da-solovev/frontend-project-44/maintainability)[![Test Coverage](https://api.codeclimate.com/v1/badges/81d6b18e10983b0b6fbd/test_coverage)](https://codeclimate.com/github/da-solovev/frontend-project-44/test_coverage)
 ## Описание
 «Игры разума» — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
 
