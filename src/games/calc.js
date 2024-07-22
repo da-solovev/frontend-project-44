@@ -5,7 +5,9 @@ import {
   startBrainGame,
 } from '../index.js';
 
-const rules = ['What is the result of the expression?', 'Integer'];
+const nameGame = 'calc';
+const description = 'What is the result of the expression?';
+const typeValidation = 'Integer';
 
 const generateOperation = () => {
   const operations = ['+', '-', '*'];
@@ -30,4 +32,4 @@ export const generateDataCalc = () => {
   }
 };
 
-export default () => startBrainGame(rules, 'calc');
+export default () => startBrainGame(nameGame, description, typeValidation);

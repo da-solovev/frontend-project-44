@@ -4,7 +4,9 @@ import {
   startBrainGame,
 } from '../index.js';
 
-const rules = ['Find the greatest common divisor of given numbers.', 'Integer'];
+const nameGame = 'gcd';
+const description = 'Find the greatest common divisor of given numbers.';
+const typeValidation = 'Integer';
 
 const findGCD = (first, second) => {
   let a = first;
@@ -29,4 +31,4 @@ export const generateDataGcd = () => {
   return [question, answer];
 };
 
-export default () => startBrainGame(rules, 'gcd');
+export default () => startBrainGame(nameGame, description, typeValidation);

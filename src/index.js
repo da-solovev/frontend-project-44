@@ -59,13 +59,11 @@ export const generateQuestion = (nameGame) => {
   }
 };
 
-export const startBrainGame = (rules, nameGame) => {
-  const [textRules, typeCheck] = rules;
-
+export const startBrainGame = (nameGame, description, typeValidation) => {
   console.log('Welcome to the Brain Games!');
   const userName = getUserName();
   console.log(`Hello, ${userName}!`);
-  console.log(textRules);
+  console.log(description);
 
   for (let i = 0; i < roundCount; i += 1) {
     const [question, correctAnswer] = generateQuestion(nameGame);
@@ -73,7 +71,7 @@ export const startBrainGame = (rules, nameGame) => {
     console.log(`Question: ${question}`);
     const userAnswer = getUserAnswer();
 
-    if (!checkCorrectUserAnswer(typeCheck, userAnswer)) {
+    if (!checkCorrectUserAnswer(typeValidation, userAnswer)) {
       showMessageToLossGame(userName, userAnswer, correctAnswer);
       return;
     }

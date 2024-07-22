@@ -4,7 +4,9 @@ import {
   maxNumber,
 } from '../index.js';
 
-const rules = ['Answer "yes" if the number is even, otherwise answer "no".', 'yes/no'];
+const nameGame = 'even';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+const typeValidation = 'yes/no';
 
 const isEven = (number) => number % 2 === 0;
 
@@ -14,4 +16,4 @@ export const generateDataEven = () => {
   return [question, answer];
 };
 
-export default () => startBrainGame(rules, 'even');
+export default () => startBrainGame(nameGame, description, typeValidation);
