@@ -47,13 +47,13 @@ brain-prime
 
 ## Демонстрация:
 
-Brain-even
+* Brain-even
 [![asciicast](https://asciinema.org/a/GLtLJq2SjO53vHXfs1aXEteRU.svg)](https://asciinema.org/a/GLtLJq2SjO53vHXfs1aXEteRU)  
-Brain-calc
+* Brain-calc
 [![asciicast](https://asciinema.org/a/dlebTXXHm2fARSs6yml4UBeBi.svg)](https://asciinema.org/a/dlebTXXHm2fARSs6yml4UBeBi)  
-Brain-gcd
+* Brain-gcd
 [![asciicast](https://asciinema.org/a/2k76QT8NDeAuUKVpyl2qnKURi.svg)](https://asciinema.org/a/2k76QT8NDeAuUKVpyl2qnKURi)  
-Brain-progression
+* Brain-progression
 [![asciicast](https://asciinema.org/a/prqOmWyZq0thGBqtdOSYRWgAm.svg)](https://asciinema.org/a/prqOmWyZq0thGBqtdOSYRWgAm)  
-Brain-prime
+* Brain-prime
 [![asciicast](https://asciinema.org/a/qD1Cdex1nJ62JjzcyRQu80vZL.svg)](https://asciinema.org/a/qD1Cdex1nJ62JjzcyRQu80vZL)  
