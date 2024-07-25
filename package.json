@@ -1,8 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/da-solovev/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/da-solovev/frontend-project-44/actions)",
-  "main": "index.js",
+  "description": "Brain-games: 5 console games to training your brain",
   "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js",
@@ -26,7 +25,6 @@
   },
   "homepage": "https://github.com/da-solovev/frontend-project-44#readme",
   "dependencies": {
-    "lodash": "^4.17.21",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
