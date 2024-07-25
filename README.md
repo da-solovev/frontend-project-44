@@ -48,12 +48,12 @@ brain-prime
 ## Демонстрация:
 
 Brain-even
-[![asciicast](https://asciinema.org/a/GLtLJq2SjO53vHXfs1aXEteRU.svg)](https://asciinema.org/a/GLtLJq2SjO53vHXfs1aXEteRU)
+[![asciicast](https://asciinema.org/a/GLtLJq2SjO53vHXfs1aXEteRU.svg)](https://asciinema.org/a/GLtLJq2SjO53vHXfs1aXEteRU)  
 Brain-calc
-[![asciicast](https://asciinema.org/a/dlebTXXHm2fARSs6yml4UBeBi.svg)](https://asciinema.org/a/dlebTXXHm2fARSs6yml4UBeBi)
+[![asciicast](https://asciinema.org/a/dlebTXXHm2fARSs6yml4UBeBi.svg)](https://asciinema.org/a/dlebTXXHm2fARSs6yml4UBeBi)  
 Brain-gcd
-[![asciicast](https://asciinema.org/a/2k76QT8NDeAuUKVpyl2qnKURi.svg)](https://asciinema.org/a/2k76QT8NDeAuUKVpyl2qnKURi)
+[![asciicast](https://asciinema.org/a/2k76QT8NDeAuUKVpyl2qnKURi.svg)](https://asciinema.org/a/2k76QT8NDeAuUKVpyl2qnKURi)  
 Brain-progression
-[![asciicast](https://asciinema.org/a/prqOmWyZq0thGBqtdOSYRWgAm.svg)](https://asciinema.org/a/prqOmWyZq0thGBqtdOSYRWgAm)
+[![asciicast](https://asciinema.org/a/prqOmWyZq0thGBqtdOSYRWgAm.svg)](https://asciinema.org/a/prqOmWyZq0thGBqtdOSYRWgAm)  
 Brain-prime
-[![asciicast](https://asciinema.org/a/qD1Cdex1nJ62JjzcyRQu80vZL.svg)](https://asciinema.org/a/qD1Cdex1nJ62JjzcyRQu80vZL)
+[![asciicast](https://asciinema.org/a/qD1Cdex1nJ62JjzcyRQu80vZL.svg)](https://asciinema.org/a/qD1Cdex1nJ62JjzcyRQu80vZL)  
