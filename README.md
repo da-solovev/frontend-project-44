@@ -1,13 +1,8 @@
 [![Actions Status](https://github.com/da-solovev/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/da-solovev/frontend-project-44/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/81d6b18e10983b0b6fbd/maintainability)](https://codeclimate.com/github/da-solovev/frontend-project-44/maintainability)
-## Описание
-«Игры разума» — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
 
-- Калькулятор. Арифметические выражения, которые необходимо вычислить.
-- Прогрессия. Поиск пропущенных чисел в последовательности чисел.
-- Определение четного числа.
-- Определение наибольшего общего делителя.
-- Определение простого числа.
+## Описание
+«Игры разума» — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново.
 
 Пример игры:
 
@@ -32,28 +27,36 @@ Congratulations, Roman!
 ## Setup
 ```
 make install
+npm link
 ```
 
-## Run
-Запуск одного из модулей:
-
+## Определение четного числа
 ```
 brain-even
+```
+[![asciicast](https://asciinema.org/a/GLtLJq2SjO53vHXfs1aXEteRU.svg)](https://asciinema.org/a/GLtLJq2SjO53vHXfs1aXEteRU)  
+
+
+## Калькулятор
+```
 brain-calc
+```
+[![asciicast](https://asciinema.org/a/dlebTXXHm2fARSs6yml4UBeBi.svg)](https://asciinema.org/a/dlebTXXHm2fARSs6yml4UBeBi)  
+
+## Определение наибольшего общего делителя
+```
 brain-gcd
+```
+[![asciicast](https://asciinema.org/a/2k76QT8NDeAuUKVpyl2qnKURi.svg)](https://asciinema.org/a/2k76QT8NDeAuUKVpyl2qnKURi)  
+
+## Прогрессия
+```
 brain-progression
+```
+[![asciicast](https://asciinema.org/a/prqOmWyZq0thGBqtdOSYRWgAm.svg)](https://asciinema.org/a/prqOmWyZq0thGBqtdOSYRWgAm)  
+
+## Определение простого числа
+```
 brain-prime
 ```
-
-## Демонстрация:
-
-* Brain-even
-[![asciicast](https://asciinema.org/a/GLtLJq2SjO53vHXfs1aXEteRU.svg)](https://asciinema.org/a/GLtLJq2SjO53vHXfs1aXEteRU)  
-* Brain-calc
-[![asciicast](https://asciinema.org/a/dlebTXXHm2fARSs6yml4UBeBi.svg)](https://asciinema.org/a/dlebTXXHm2fARSs6yml4UBeBi)  
-* Brain-gcd
-[![asciicast](https://asciinema.org/a/2k76QT8NDeAuUKVpyl2qnKURi.svg)](https://asciinema.org/a/2k76QT8NDeAuUKVpyl2qnKURi)  
-* Brain-progression
-[![asciicast](https://asciinema.org/a/prqOmWyZq0thGBqtdOSYRWgAm.svg)](https://asciinema.org/a/prqOmWyZq0thGBqtdOSYRWgAm)  
-* Brain-prime
-[![asciicast](https://asciinema.org/a/qD1Cdex1nJ62JjzcyRQu80vZL.svg)](https://asciinema.org/a/qD1Cdex1nJ62JjzcyRQu80vZL)  
+[![asciicast](https://asciinema.org/a/qD1Cdex1nJ62JjzcyRQu80vZL.svg)](https://asciinema.org/a/qD1Cdex1nJ62JjzcyRQu80vZL)
