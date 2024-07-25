@@ -1,34 +1,39 @@
-import _ from 'lodash';
+import generateRandomNumber from '../helpers.js';
 import {
-  getRandomInt,
   maxNumber,
+  minNumber,
   startBrainGame,
 } from '../index.js';
 
-const nameGame = 'calc';
 const description = 'What is the result of the expression?';
 
-const generateOperation = () => {
-  const operations = ['+', '-', '*'];
-  return _.sample(operations);
-};
-
-export const generateDataCalc = () => {
-  const operation = generateOperation();
-  const first = getRandomInt(maxNumber);
-  const second = getRandomInt(maxNumber);
-  const question = `${first} ${operation} ${second}`;
-
+const calculateExpression = (number1, number2, operation) => {
   switch (operation) {
     case '+':
-      return [question, (first + second).toString()];
+      return number1 + number2;
     case '-':
-      return [question, (first - second).toString()];
+      return number1 - number2;
     case '*':
-      return [question, (first * second).toString()];
+      return number1 * number2;
     default:
-      return [];
+      throw new Error(`Unknown operation: '${operation}'!`);
   }
 };
 
-export default () => startBrainGame(nameGame, description);
+export const generateQuestionCalc = () => {
+  const operations = ['+', '-', '*'];
+  const startIndex = 0;
+  const endIndex = 2;
+  const randomIndex = generateRandomNumber(startIndex, endIndex);
+
+  const operation = operations[randomIndex];
+  const number1 = generateRandomNumber(minNumber, maxNumber);
+  const number2 = generateRandomNumber(minNumber, maxNumber);
+
+  const question = `${number1} ${operation} ${number2}`;
+  const answer = calculateExpression(number1, number2, operation).toString();
+
+  return [question, answer];
+};
+
+export default () => startBrainGame(generateQuestionCalc, description);

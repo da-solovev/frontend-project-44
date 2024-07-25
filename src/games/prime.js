@@ -1,10 +1,10 @@
+import generateRandomNumber from '../helpers.js';
 import {
-  getRandomInt,
   maxNumber,
+  minNumber,
   startBrainGame,
 } from '../index.js';
 
-const nameGame = 'prime';
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrimeNumber = (number) => {
@@ -20,10 +20,10 @@ const isPrimeNumber = (number) => {
   return true;
 };
 
-export const generateDataPrime = () => {
-  const question = getRandomInt(maxNumber);
+export const generateQuestionPrime = () => {
+  const question = generateRandomNumber(minNumber, maxNumber);
   const answer = isPrimeNumber(question) ? 'yes' : 'no';
   return [question, answer];
 };
 
-export default () => startBrainGame(nameGame, description);
+export default () => startBrainGame(generateQuestionPrime, description);

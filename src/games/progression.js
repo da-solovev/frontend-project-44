@@ -1,49 +1,43 @@
+import generateRandomNumber from '../helpers.js';
 import {
-  getRandomInt,
   maxNumber,
+  minNumber,
   startBrainGame,
 } from '../index.js';
 
-const nameGame = 'progression';
 const description = 'What number is missing in the progression?';
 
 const generateArithmeticProgression = (length, start, step) => {
   const progression = [];
-  let currentlem = start;
   for (let i = 0; i < length; i += 1) {
-    progression.push(currentlem);
-    currentlem += step;
+    const elem = start + step * i;
+    progression.push(elem);
   }
 
   return progression;
 };
 
-export const generateParamsForProgression = () => {
+export const generateQuestionProgression = () => {
   const minLength = 5;
-  const maxGrowthLength = 5;
+  const maxLength = 10;
 
-  const length = getRandomInt(maxGrowthLength) + minLength;
-  const start = getRandomInt(maxNumber);
-  const step = getRandomInt(maxNumber);
+  const length = generateRandomNumber(minLength, maxLength);
+  const start = generateRandomNumber(minNumber, maxNumber);
+  const step = generateRandomNumber(minNumber, maxNumber);
 
-  return [length, start, step];
-};
-
-export const generateDataProgression = (length, start, step) => {
   const progression = generateArithmeticProgression(length, start, step);
-  const positionSectetValue = getRandomInt(length) - 1;
 
-  const answer = progression[positionSectetValue].toString();
+  const startPositionSecret = 0;
+  const endPositionSecret = length - 1;
+  const positionSecretValue = generateRandomNumber(startPositionSecret, endPositionSecret);
 
-  progression[positionSectetValue] = '..';
+  const answer = progression[positionSecretValue].toString();
 
-  let question = '';
+  progression[positionSecretValue] = '..';
 
-  for (let i = 0; i < progression.length; i += 1) {
-    question = `${question} ${progression[i]}`;
-  }
+  const question = progression.join(' ');
 
-  return [question.trim(), answer];
+  return [question, answer];
 };
 
-export default () => startBrainGame(nameGame, description);
+export default () => startBrainGame(generateQuestionProgression, description);

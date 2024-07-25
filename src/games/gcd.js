@@ -1,10 +1,10 @@
+import generateRandomNumber from '../helpers.js';
 import {
-  getRandomInt,
   maxNumber,
+  minNumber,
   startBrainGame,
 } from '../index.js';
 
-const nameGame = 'gcd';
 const description = 'Find the greatest common divisor of given numbers.';
 
 const findGCD = (first, second) => {
@@ -22,12 +22,12 @@ const findGCD = (first, second) => {
   return a + b;
 };
 
-export const generateDataGcd = () => {
-  const first = getRandomInt(maxNumber);
-  const second = getRandomInt(maxNumber);
+export const generateQuestionGcd = () => {
+  const first = generateRandomNumber(minNumber, maxNumber);
+  const second = generateRandomNumber(minNumber, maxNumber);
   const question = `${first} ${second}`;
   const answer = findGCD(first, second).toString();
   return [question, answer];
 };
 
-export default () => startBrainGame(nameGame, description);
+export default () => startBrainGame(generateQuestionGcd, description);
